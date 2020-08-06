@@ -40,7 +40,8 @@
                                     <td><%= i + 1 %></td>
                                     <td><%= activity[i].name %></td>
                                     <td><%= activity[i].type %></td>
-                                    <td><img src="http://localhost:3000/<%= activity[i].imageUrl %>" alt=""></td>
+                                    <td><img src="https://admin-staycation-lymanto.herokuapp.com/<%= activity[i].imageUrl %>"
+                                            alt=""></td>
                                     <td>
                                         <form
                                             action="/admin/item/<%= itemId %>/activity/<%= activity[i].id %>?_method=DELETE"
