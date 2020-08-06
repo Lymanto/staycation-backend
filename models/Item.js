@@ -21,10 +21,19 @@ const itemSchema = new mongoose.Schema({
   },
   isPopular: {
     type: Boolean,
+    default: false,
   },
   description: {
     type: String,
     required: true,
+  },
+  unit: {
+    type: String,
+    default: "night",
+  },
+  sumBooking: {
+    type: Number,
+    default: 0,
   },
   imageId: [
     {
@@ -32,6 +41,10 @@ const itemSchema = new mongoose.Schema({
       ref: "Image",
     },
   ],
+  categoryId: {
+    type: ObjectId,
+    ref: "Category",
+  },
   featureId: [
     {
       type: ObjectId,
